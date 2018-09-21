@@ -14,3 +14,4 @@ You can also mount network shares without smbfs:
 ```shell
 $ sudo mount -t drvfs '\\server\share' /mnt/share
 ```
+

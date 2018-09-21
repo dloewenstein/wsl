@@ -1,3 +1,16 @@
+## Building conda R packages using mro-base
+
+As of 2018-09-19 you have to change 'r-base' in the meta.yaml file to 'mro-base' to satisfy dependencies, run command:
+
+```shell
+find path_to_build_folder -type f -name *.yaml -print0 | xargs -0 sed -i "s/r-base/mro-base/g"
+```
+
+Then to build:
+```shell
+conda build path_to_package --R=mro-base
+```
+
 ## git2r
 
 Problems caused by unable to load shared libssl.so.1.0.0 and libcurl.so.4
